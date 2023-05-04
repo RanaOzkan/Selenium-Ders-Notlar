@@ -30,8 +30,9 @@ public class C01_TestNotasyonu {
 
         @Test
         public void test01() {
-            WebDriverManager.chromedriver().setup();
-            WebDriver driver = new ChromeDriver();
+            ChromeOptions options=new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*");
+            WebDriver driver=new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -42,8 +43,9 @@ public class C01_TestNotasyonu {
 
         @Test
         public void test02() {
-            WebDriverManager.chromedriver().setup();
-            WebDriver driver = new ChromeDriver();
+            ChromeOptions options=new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*");
+            WebDriver driver=new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
